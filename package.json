@@ -1,0 +1,23 @@
+{
+  "name": "shape-calculator-vanillajs",
+  "version": "1.0.0",
+  "description": "A shape calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amolkedari92/shape-calculator-vanillajs.git"
+  },
+  "keywords": [
+    "share",
+    "calculator"
+  ],
+  "author": "Amol kedari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amolkedari92/shape-calculator-vanillajs/issues"
+  },
+  "homepage": "https://github.com/amolkedari92/shape-calculator-vanillajs#readme"
+}
