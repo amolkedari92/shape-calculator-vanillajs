@@ -6,10 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Shape Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Share Calculator</h1>
+    <header class="header">
+        <a class="header__link" href="/">
+            <img class="header__logo" alt="logo" src="./images/BWLogo.png" />
+        </a>
+    </header>
+    <section class="app-section">
+        <div class="app-section__instruction">
+            <div class="instr-wrapper">
+                <div>
+                    <h1 class="heading">Welcome to Shape Calculator</h1>
+                </div>
+                <div class="text">Shape Calculator is an interactive web application. To the right you will find the 3 step application. Follow the intstructions in each step . Clicking cancel will take you back to step 1. Enjoy! bombayworks.com Rectangle</div>    
+            </div>
+        </div>
+        <div class="app-section__calculator">
+            <div class="shape-calculator">
+                <div class="calculator__heading" id="heading"></div>
+                <div class="calculator__desc" id="desc"></div>
+                <div  class="calculator__controls" id="controls" style="display: none"></div>
+                <div  class="calculator__result" id="result" style="display: none"></div>
+                <div  class="calculator__actions" id="actions" style="display: none"></div>
+            </div>
+        </div>
+        <div class="shape-wrapper">
+            <div class="shape-item" id="shape" style="display: none;"></div>
+        </div>
+    </section>
+    <footer class="footer">Boombayworks.com</footer>
 </body>
 
 </html>

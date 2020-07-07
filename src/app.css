@@ -1,3 +1,154 @@
 body {
-    background-color: red;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #E8E8E8;
+    padding: 48px;
+    text-align: center;
+}
+
+.header .header__link {
+    display: inline-block;
+}
+
+.header .header__logo {
+    height: 72px;
+    width: 72px;
+}
+
+.app-section {
+    background-color: #FFF;
+    display: flex;
+    height: calc(100vh - (170px + 120px));
+    padding: 48px 72px;
+}
+
+.app-section__instruction {
+    flex: 1;
+}
+
+.instr-wrapper {
+    margin: 0 auto;
+    max-width: 420px;
+}
+
+.app-section__calculator {
+    flex: 1;
+}
+
+.app-section__instruction h1 {
+    margin-bottom: 24px;
+}
+
+.footer {
+    background-color: #000; 
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    padding: 48px;
+    text-align: center;
+}
+
+.text {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.shape-calculator {
+    background-color: #E8E8E8;
+    border-radius: 8px;
+    height: 100%;
+    padding: 24px;
+    width: 420px;
+}
+
+.calculator__heading {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.calculator__controls {
+    height: calc(100% - 200px);
+}
+
+.wrapper span {
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.calculator__desc {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #E8e8e8;
+}
+
+.shape-wrapper {
+    flex: 1;
+}
+
+.shape-item {
+    background-color: #E8E8E8;
+    display: block;
+    height: 250px;
+    width: 250px;
+}
+
+.rect {
+    width: 400px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.eclipse {
+    border-radius: 50%;
+    width: 400px;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 19px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 10px ;
+}
+
+.btn-success {
+    background-color: green;
+    color: #FFF;
+}
+
+label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin: 8px;
+    min-width: 100px;
+}
+
+input[type=radio] {
+    cursor: pointer;
 }
