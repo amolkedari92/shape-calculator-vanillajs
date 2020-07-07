@@ -1,11 +1,13 @@
 import "./app.css";
 
+// IDs
 var HEADING_ID = "heading";
 var DESC_ID = "desc";
 var ACTIONS_ID = "actions";
 var CONTROLS_ID = "controls";
 var RESULT_ID = "result"
 
+// Page copy mapping 
 var HEADINGS_MAPPING = {
     1: "Step 1 : Select Your Shape",
     2: "Step 2 : Insert your values",
@@ -23,6 +25,7 @@ var DESCRIPTION_MAPPING = {
 
 var RESULT_TEXT = "The area is ";
 
+// Constant
 var TYPES = {
     RECT: 'rectangle',
     SQUARE: 'square',
@@ -53,6 +56,7 @@ var currentState = 1;
 var userSelectedOption = 0;
 var obj;
 
+// Create Shape
 function Shape(x, y) {
     this.x = x;
     this.y = y;
@@ -88,11 +92,13 @@ function Eclipse(x, y) {
     return circle;
 }
 
+// Set page heading
 function setHeading(id) {
     var headingElem = document.getElementById(HEADING_ID);
     headingElem.innerHTML = HEADINGS_MAPPING[id];
 };
 
+// Set page description
 function setDesc(id) {
     var headingElem = document.getElementById(DESC_ID);
     if (DESCRIPTION_MAPPING[id] && userSelectedOption) {
@@ -160,6 +166,7 @@ function setControls(id) {
     elem.innerHTML = "";
     if (id == 1) {
         elem.style.display = "block";
+
         var wrapper = document.createElement("div")
         wrapper.setAttribute("class", "wrapper");
 
@@ -188,6 +195,7 @@ function setControls(id) {
         if (userSelectedOption == 1) {
             var widthElem = generateInput("width", "");
             elem.appendChild(widthElem);
+
             var heightElem = generateInput("height", "");
             elem.appendChild(heightElem);
         } else if (userSelectedOption == 2) {
@@ -199,6 +207,7 @@ function setControls(id) {
         } else if (userSelectedOption == 4) {
             var widthElem = generateInput("width", "");
             elem.appendChild(widthElem);
+
             var heightElem = generateInput("height", "");
             elem.appendChild(heightElem);
         }
@@ -210,31 +219,40 @@ function setControls(id) {
 function goToNext() {
     if (currentState < 4) {
         if (currentState == 1) {
+
+            // Get user selected value
             for (var i = 0; i < USER_OPTIONS.length; i++) {
                 var ip = document.getElementById("checkbox-" + i);
                 if (ip.checked) {
                     userSelectedOption = i + 1;
                 }
             }
+
             if (userSelectedOption) {
                 currentState++;
             }
+
         } else if (currentState == 2) {
             if (userSelectedOption == 1) {
+                // Get input values and create shape
+    
                 var width = document.getElementById("width");
                 var height = document.getElementById("height");
+
                 if (height && width && height.value && width.value) {
                     obj = new Rect(height.value, width.value);
                     currentState++;
                 }
             } else if (userSelectedOption == 2) {
                 var length = document.getElementById("length");
+    
                 if (length && length.value) {
                     obj = new Square(length.value);
                     currentState++;
                 }
             } else if (userSelectedOption == 3) {
                 var radius = document.getElementById("radius");
+
                 if (radius && radius.value) {
                     obj = new Circle(radius.value);
                     currentState++;
@@ -242,6 +260,7 @@ function goToNext() {
             } else if (userSelectedOption == 4) {
                 var width = document.getElementById("width");
                 var height = document.getElementById("height");
+
                 if (height && width && height.value && width.value) {
                     obj = new Eclipse(height.value, width.value);
                     currentState++;
@@ -262,11 +281,14 @@ function resetToDefault() {
 function setResult() {
     var result = document.getElementById("result");
     result.style.display = "none";
+
     var shape = document.getElementById("shape");
     shape.style.display = "none";
+    
     if(currentState == 3) {
         result.innerText = RESULT_TEXT + obj.area();
         result.style.display = "block";
+    
         shape.style.display = "block";
         shape.setAttribute("class", "shape-item " + obj.type)
     }
