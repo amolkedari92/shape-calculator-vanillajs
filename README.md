@@ -3,6 +3,12 @@ A shape calculator in Vanilla js
 
 # Techstack: VanillaJS, HTML5, CSS3, Webpack
 
+# Process to run app
+
+# git clone https://github.com/amolkedari92/shape-calculator-vanillajs
+
+# npm install
+
 # To Run app
 npm run start
 
