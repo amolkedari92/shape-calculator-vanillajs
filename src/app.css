@@ -81,6 +81,10 @@ header {
     height: calc(100% - 200px);
 }
 
+.calculator__result {
+    height: calc(100% - 200px);
+}
+
 .wrapper span {
     font-weight: 600;
     font-family: cursive;
@@ -151,4 +155,32 @@ label {
 
 input[type=radio] {
     cursor: pointer;
+}
+
+
+@media all and (max-width: 768px) {
+    .app-section {
+        height: auto;
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .header {
+        padding: 24px;
+    }
+
+    .header .header__logo {
+        height: 48px;
+    }
+
+    .shape-calculator {
+        width: 100%;
+        margin: 24px 0;
+    }
+
+    .rect,
+    .eclipse {
+        width: 200px;
+    }
+
 }
